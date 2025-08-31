@@ -1,45 +1,69 @@
-/* style.css */
-
+/* === Bas (mobil först) === */
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(120deg, #f0f9ff, #cbebff);
-    color: #333;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f8f9fa;
+  color: #333;
 }
 
-h1 {
-    text-align: center;
-    margin-top: 40px;
-    color: #005f99;
+header {
+  text-align: center;
+  background: #6552c5;
+  color: #fff;
+  padding: 1rem;
+}
+
+main {
+  padding: 1rem;
 }
 
 h2 {
-    margin-left: 20px;
-    color: #0077b6;
-}
-
-ul {
-    list-style: square;
-    margin-left: 40px;
-    font-size: 18px;
-}
-
-li {
-    margin-bottom: 8px;
-}
-
-li:hover {
-    color: #0096c7;
-    font-weight: bold;
-    cursor: pointer;
+  text-align: center;
 }
 
 .profile {
-    display: block;
-    margin: 20px auto;
-    width: 150px;   /* ungefär 4 cm på många skärmar */
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: block;
+  margin: 1rem auto;       /* bilden centrerad på mobil */
+  width: 150px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+section {
+  padding: 0.5rem;
+}
+
+ul {
+  display: block;
+  width: fit-content;      /* blockets bredd anpassas efter innehållet */
+  margin: 0.5rem auto;     /* centrerar blocket på mobil */
+  text-align: left;        /* texten inuti alltid vänsterställd */
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+/* === Desktop (≥768px): två kolumner === */
+@media (min-width: 768px) {
+  main {
+    max-width: 1000px;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .profile {
+    margin: 0;             /* bilden vänster i sin kolumn */
+    width: 150px;
+  }
+
+  ul {
+    margin: 0;             /* textblocket vänster i sin kolumn */
+    width: auto;
+  }
+}
+
+h2 {
+  text-align: center;
 }
