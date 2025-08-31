@@ -34,3 +34,12 @@ li:hover {
     font-weight: bold;
     cursor: pointer;
 }
+
+.profile {
+    display: block;
+    margin: 20px auto;
+    width: 150px;   /* ungefär 4 cm på många skärmar */
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
